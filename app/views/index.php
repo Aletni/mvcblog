@@ -5,8 +5,9 @@
     <?php
        require APPROOT . '/views/includes/navigation.php';
     ?>
-
-    <div class="wrapper-landing">
+<div class="container"
+     
+    <div class="text">
         <<h1>DEMO ENTREGA 1</h1>
         <h2>MVCS basico con Usuarios</h2>
         <h3>Esta demo es una version. La BD utilizada es una version reducida de la final para esta demo.</h3>
@@ -17,6 +18,7 @@
         <h3>- Faltan los tests</h3>
         <h3>- La primera version de las funciones en los servicios no presentan en las vistas los mensajes de error si algun campo se encuentra mal introducido. Si se produce un error, se recarga el formulario. La funcion de actualizacion se encuentra en desarrollo</h3>
     </div>
+ </div>
 
     
 </div>
