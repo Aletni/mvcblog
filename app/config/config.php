@@ -9,7 +9,7 @@
     define('APPROOT', dirname(dirname(__FILE__)));
 
     //URLROOT (Dynamic links)
-    define('URLROOT', 'http://localhost/mvcblog');
+    define('URLROOT', 'http://192.168.31.128/mvcblog');
 
     //Sitename
     define('SITENAME', 'Arquitectura PDP');
