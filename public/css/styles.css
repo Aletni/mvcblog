@@ -62,10 +62,15 @@ ul {
   right:-120px;
   top:0px;
 }
-#iniciar-ses {
-   background-color: rgb(0, 140, 255);
+.iniciar-ses {
+  background-color: #0076FF;
+  color:#fff;
+  text-decoration:none;
+  padding:10px 12px;
+  display:block;
+
 }
-#in-ses{
+.in-ses{
   text-decoration:none;
   padding:10px 12px;
   display:block;
@@ -73,7 +78,7 @@ ul {
 }
 /* Cuando un suario esta logueado */
 
-#logueado {
+.logueado {
   color: white;
   text-align: center;
   padding: 14px 36px;
