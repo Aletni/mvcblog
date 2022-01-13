@@ -21,7 +21,7 @@
             </span><br />
 
         <label for="" class="lbl">Borrado:</label><br />
-            <input class="inp" type="number" placeholder="Borrado *" name="borrado" value="<?php echo $anhoacademico['accion']->borrado ?>"><br />
+            <input class="inp" type="number" placeholder="Borrado *" name="borrado" value="<?php echo $data['anhoacademico']->borrado ?>"><br />
             <span class="invalidFeedback">
                 <?php echo $data['borradoError']; ?>
             </span><br />

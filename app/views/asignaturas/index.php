@@ -8,39 +8,76 @@
     ?>
 </div>
 
-<div class="text">
-    <?php if(isLoggedIn()): ?>
-        <a class="btn" href="<?php echo URLROOT; ?>/anhosacademicos/create">
-            Create
-        </a>
-    <?php endif; ?>
-<h2>Gestion Años Academicos</h2>
+<h2>Gestion Asignaturas</h2>
 <table class="tabla-gestion">
     <tr>
           <th>Año Academico</th>
-          <th>Borrado</th>  
+          <th>ID Titulacion</th>
+          <th>ID Departamento</th>
+          <th>ID Profesor</th>
+          <th>Codigo</th>
+          <th>Nombre</th>
+          <th>Creditos</th>
+          <th>Tipo</th>
+          <th>Horas</th>
+          <th>Cuatrimestre</th>
+          <th>Borrado</th>
+          <th><div class="iniciar-ses">
+    <?php if(isLoggedIn()): ?>
+        <a class="btn" href="<?php echo URLROOT; ?>/asignaturas/create">
+            Registrar Asignatura
+        </a>
+        </div>
+    <?php endif; ?></th>  
           </tr>
           <tr>
-    <?php foreach($data['anhoacademico'] as $anhoacademico): ?>
+    <?php foreach($data['asignatura'] as $asignatura): ?>
 
             <?php //if(isset($_SESSION['dni']) 
             //&& $_SESSION['user_id'] == $post->user_id): ?>
             <?php //endif; ?>
-            <td>
-                <?php echo $anhoacademico->id; ?>
+             <td>
+                <?php echo $asignatura->id_ANHOACADEMICO; ?>
+            </td>
+             <td>
+                <?php echo $asignatura->id_TITULACION; ?>
+            </td>
+             <td>
+                <?php echo $asignatura->id_DEPARTAMENTO; ?>
+            </td>
+             <td>
+                <?php echo $asignatura->id_PROFESOR; ?>
+            </td>
+             <td>
+                <?php echo $asignatura->codigo; ?>
+            </td>
+             <td>
+                <?php echo $asignatura->nombre; ?>
+            </td>
+             <td>
+                <?php echo $asignatura->creditos; ?>
+            </td>
+             <td>
+                <?php echo $asignatura->tipo; ?>
+            </td>
+             <td>
+                <?php echo $asignatura->horas; ?>
+            </td>
+             <td>
+                <?php echo $asignatura->cuatrimestre; ?>
             </td>
             
             <td>
-                <?php echo $anhoacademico->borrado ?>
+                <?php echo $asignatura->borrado ?>
             </td>
             <td>
              <a
                     class="btn orange"
-                    href="<?php echo URLROOT . "/anhosacademicos/update/" . $anhoacademico->id ?>">
-                    Update
+                    href="<?php echo URLROOT . "/asignaturas/update/" . $asignatura->id ?>">
+                    Actualizar Asignatura
                 </a>
-                <form action="<?php echo URLROOT . "/anhosacademicos/delete/" . $anhoacademico->id ?>" method="POST">
-                    <input type="submit" name="delete" value="Delete" class="btn red">
+                <form action="<?php echo URLROOT . "/asignaturas/delete/" . $asignatura->id ?>" method="POST">
+                    <input type="submit" name="delete" value="Borrar Asignatura" class="btn red">
                 </form>
             </td>
             </tr>
