@@ -181,14 +181,16 @@ $data = [
         return false;
     }
  
-    public function crearSesionUsuario($user) {
+    public function crearSesionUsuario($user)
+    {
 
         $_SESSION['dni'] = $user->dni;
         $_SESSION['email'] = $user->email;
+        $_SESSION['id_rol'] = $user->id_ROL;
         return true;
-       // header('location:' . URLROOT . '/pages/index');
+        // header('location:' . URLROOT . '/pages/index');
 
-   
+
     }
 
     public function deshacerSesionUsuario() {

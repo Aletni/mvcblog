@@ -24,21 +24,17 @@ class User {
         }
     }
 
-    public function login($dni, $password) {
-        $this->db->query('SELECT * FROM usuario WHERE dni = :dni');
-
+   public function login($dni, $password) {
+        //$this->db->query('SELECT * FROM usuario WHERE dni = :dni');
+        $this->db->query('SELECT usuario.dni,usuario_rol.id_ROL FROM usuario,usuario_rol WHERE usuario_rol.id_USUARIO=:dni; ');
         //Bind value
         $this->db->bind(':dni', $dni);
-
+      
         $row = $this->db->single();
+       
+        
+        return $row;
 
-      //  $hashedPassword = $row->password;
-
-   //     if (password_verify($password, $hashedPassword)) {
-            return $row;
- //       } else {
- //           return false;
- //       }
     }
 
     //Find user by email. Email is passed in by the Controller.
